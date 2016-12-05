@@ -7,7 +7,7 @@ class Quote (models.Model):
     text = models.CharField(max_length=2000, default='placeholder')
     repostcounter = models.IntegerField(default=0)
     stringnum = models.CharField(max_length=3, default='000')
-    chapternum = models.CharField(max_length=3, default='000')
+    chapternum = models.CharField(max_length=10, default='000')
     def __str__(self):
         return '%s - %s' % (self.chapternum, self.stringnum)
     def random(self):
